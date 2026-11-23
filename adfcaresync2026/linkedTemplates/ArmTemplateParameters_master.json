@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adfcaresync2026"
+		},
+		"LS_DataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://caresynceproject.dfs.core.windows.net/"
+		},
+		"LS_PostgreSql_properties_typeProperties_server": {
+			"value": "ep-falling-sunset-bifyhjk3-pooler.c-5.ap-southeast-1.aws.neon.tech"
+		},
+		"LS_PostgreSql_properties_typeProperties_database": {
+			"value": "neondb"
+		},
+		"LS_PostgreSql_properties_typeProperties_username": {
+			"value": "neondb_owner"
+		},
+		"LS_AzureKeyVault_properties_typeProperties_baseUrl": {
+			"value": "https://caresync-keyvault2026.vault.azure.net/"
+		},
+		"LS_SqlDatabase_properties_typeProperties_server": {
+			"value": "caresync-server2026.database.windows.net"
+		},
+		"LS_SqlDatabase_properties_typeProperties_database": {
+			"value": "SQL-DB-Caresync"
+		},
+		"LS_SqlDatabase_properties_typeProperties_userName": {
+			"value": "databeli"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
