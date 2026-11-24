@@ -5,6 +5,9 @@
 		"factoryName": {
 			"value": "adfcaresync2026"
 		},
+		"LS_AzureKeyVault_properties_typeProperties_baseUrl": {
+			"value": "https://caresync-keyvault2026.vault.azure.net/"
+		},
 		"LS_DataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://caresynceproject.dfs.core.windows.net/"
 		},
@@ -17,9 +20,6 @@
 		"LS_PostgreSql_properties_typeProperties_username": {
 			"value": "neondb_owner"
 		},
-		"LS_AzureKeyVault_properties_typeProperties_baseUrl": {
-			"value": "https://caresync-keyvault2026.vault.azure.net/"
-		},
 		"LS_SqlDatabase_properties_typeProperties_server": {
 			"value": "caresync-server2026.database.windows.net"
 		},
@@ -28,6 +28,9 @@
 		},
 		"LS_SqlDatabase_properties_typeProperties_userName": {
 			"value": "databeli"
+		},
+		"LS_AzureDatabricks_properties_typeProperties_existingClusterId": {
+			"value": "1123-111238-xh600ntn"
 		}
 	}
 }
