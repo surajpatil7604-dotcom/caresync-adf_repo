@@ -75,6 +75,10 @@
 									"table_id": {
 										"value": "@item().table_id",
 										"type": "Expression"
+									},
+									"adf_run_id": {
+										"value": "@pipeline().parameters.adf_run_id",
+										"type": "Expression"
 									}
 								}
 							}
@@ -134,7 +138,11 @@
 							"typeProperties": {
 								"scripts": [
 									{
-										"type": "Query"
+										"type": "Query",
+										"text": {
+											"value": "UPDATE ctrl.audit_log\nSET\n    status = 'FAILED',\n    end_time = SYSUTCDATETIME()\nWHERE\n    adf_run_id = '@{pipeline().parameters.adf_run_id}'\n    AND table_id =@{item().table_id};",
+											"type": "Expression"
+										}
 									}
 								],
 								"scriptBlockExecutionTimeout": "02:00:00"
@@ -151,7 +159,7 @@
 			},
 			"adf_run_id": {
 				"type": "string",
-				"defaultValue": "a2"
+				"defaultValue": "a3"
 			}
 		},
 		"variables": {
