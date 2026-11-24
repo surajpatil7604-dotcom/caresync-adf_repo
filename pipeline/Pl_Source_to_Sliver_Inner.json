@@ -187,7 +187,7 @@
 							"type": "Expression"
 						},
 						"merge_keys": {
-							"value": "@coalesce(activity('Read_watermark').output.firstRow.merge_keys,'')",
+							"value": "@coalesce(activity('Read_watermark').output.firstRow.merge_keys, '')",
 							"type": "Expression"
 						},
 						"laod_type": {
