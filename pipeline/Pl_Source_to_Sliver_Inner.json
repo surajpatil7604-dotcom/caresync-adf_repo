@@ -190,7 +190,7 @@
 							"value": "@coalesce(activity('Read table detials').output.firstRow.merge_keys, '')",
 							"type": "Expression"
 						},
-						"laod_type": {
+						"load_type": {
 							"value": "@activity('Read table detials').output.firstRow.load_type",
 							"type": "Expression"
 						}
