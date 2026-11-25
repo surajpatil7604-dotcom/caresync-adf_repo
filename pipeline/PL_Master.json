@@ -51,7 +51,20 @@
 			{
 				"name": "Silver to Gold",
 				"type": "ExecutePipeline",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "source to silver postgres",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					},
+					{
+						"activity": "source to silver ADLS csv",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"secureInput": false
 				},
