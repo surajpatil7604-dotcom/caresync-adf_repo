@@ -5,6 +5,9 @@
 		"factoryName": {
 			"value": "adfcaresync2026"
 		},
+		"LS_AzureDatabricks_properties_typeProperties_existingClusterId": {
+			"value": "1123-111238-xh600ntn"
+		},
 		"LS_AzureKeyVault_properties_typeProperties_baseUrl": {
 			"value": "https://caresync-keyvault2026.vault.azure.net/"
 		},
@@ -28,9 +31,6 @@
 		},
 		"LS_SqlDatabase_properties_typeProperties_userName": {
 			"value": "databeli"
-		},
-		"LS_AzureDatabricks_properties_typeProperties_existingClusterId": {
-			"value": "1123-111238-xh600ntn"
 		}
 	}
 }

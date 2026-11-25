@@ -7,6 +7,10 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "adfcaresync2026"
 		},
+		"LS_AzureDatabricks_properties_typeProperties_existingClusterId": {
+			"type": "string",
+			"defaultValue": "1123-111238-xh600ntn"
+		},
 		"LS_AzureKeyVault_properties_typeProperties_baseUrl": {
 			"type": "string",
 			"defaultValue": "https://caresync-keyvault2026.vault.azure.net/"
@@ -38,10 +42,6 @@
 		"LS_SqlDatabase_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "databeli"
-		},
-		"LS_AzureDatabricks_properties_typeProperties_existingClusterId": {
-			"type": "string",
-			"defaultValue": "1123-111238-xh600ntn"
 		},
 		"containerUri": {
 			"type": "string",
@@ -76,6 +76,9 @@
 					"LS_DataLakeStorage1_properties_typeProperties_url": {
 						"value": "[parameters('LS_DataLakeStorage1_properties_typeProperties_url')]"
 					},
+					"LS_AzureDatabricks_properties_typeProperties_existingClusterId": {
+						"value": "[parameters('LS_AzureDatabricks_properties_typeProperties_existingClusterId')]"
+					},
 					"LS_PostgreSql_properties_typeProperties_server": {
 						"value": "[parameters('LS_PostgreSql_properties_typeProperties_server')]"
 					},
@@ -93,9 +96,6 @@
 					},
 					"LS_SqlDatabase_properties_typeProperties_userName": {
 						"value": "[parameters('LS_SqlDatabase_properties_typeProperties_userName')]"
-					},
-					"LS_AzureDatabricks_properties_typeProperties_existingClusterId": {
-						"value": "[parameters('LS_AzureDatabricks_properties_typeProperties_existingClusterId')]"
 					}
 				}
 			},
