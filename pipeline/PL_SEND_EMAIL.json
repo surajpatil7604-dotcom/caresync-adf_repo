@@ -149,7 +149,7 @@
 				"typeProperties": {
 					"variableName": "logic_apps_body",
 					"value": {
-						"value": "{\n\"subject\":\"@{variables('email_subject')}\"\",\n\"email_receipent\":\"@{pipeline().globalParameters.email_receipent}\",\n\"body_header\":\"@{variables('body_header')}\",\n\"body_footer\":\"@{variables('body_footer')}\",\n\"status_table\":activity('Read_all_tables_status').output.value\n}",
+						"value": "@concat(\n    '{',\n    '\"subject\":\"', variables('email_subject'), '\",',\n    '\"email_receipent\":\"', pipeline().globalParameters.email_receipent, '\",',\n    '\"body_header\":\"', variables('body_header'), '\",',\n    '\"body_footer\":\"', variables('body_footer'), '\",',\n    '\"status_table\":', string(activity('Read_all_tables_status').output.value),\n    '}'\n)",
 						"type": "Expression"
 					}
 				}
@@ -157,7 +157,14 @@
 			{
 				"name": "email",
 				"type": "WebActivity",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "prepaer_logic_apps_body",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
