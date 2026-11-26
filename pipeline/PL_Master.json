@@ -82,6 +82,28 @@
 						}
 					}
 				}
+			},
+			{
+				"name": "email_send_status",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "PL_SEND_EMAIL",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true,
+					"parameters": {
+						"adf_run_id": {
+							"value": "@pipeline().RunId",
+							"type": "Expression"
+						}
+					}
+				}
 			}
 		],
 		"annotations": []
