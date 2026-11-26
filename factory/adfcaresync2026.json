@@ -1,0 +1,12 @@
+{
+	"name": "adfcaresync2026",
+	"properties": {
+		"globalParameters": {
+			"email_receipients": {
+				"type": "string",
+				"value": "surajmpatil3247@gmail.com"
+			}
+		}
+	},
+	"location": "centralindia"
+}
