@@ -1199,6 +1199,23 @@
 										],
 										"scriptBlockExecutionTimeout": "02:00:00"
 									}
+								},
+								{
+									"name": "updated pipeline ad failed",
+									"type": "Fail",
+									"dependsOn": [
+										{
+											"activity": "source_to_sliver",
+											"dependencyConditions": [
+												"Failed"
+											]
+										}
+									],
+									"userProperties": [],
+									"typeProperties": {
+										"message": "inner pipeline failed",
+										"errorCode": "500"
+									}
 								}
 							]
 						}
