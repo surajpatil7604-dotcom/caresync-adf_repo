@@ -2,7 +2,7 @@
 	"name": "adfcaresync2026",
 	"properties": {
 		"globalParameters": {
-			"email_receipients": {
+			"email_receipent": {
 				"type": "string",
 				"value": "surajmpatil3247@gmail.com"
 			}
