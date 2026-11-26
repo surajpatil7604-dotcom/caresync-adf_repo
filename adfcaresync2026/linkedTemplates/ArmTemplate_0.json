@@ -948,6 +948,23 @@
 										],
 										"scriptBlockExecutionTimeout": "02:00:00"
 									}
+								},
+								{
+									"name": "The Gold nootebook failed",
+									"type": "Fail",
+									"dependsOn": [
+										{
+											"activity": "sliver_to_Gold",
+											"dependencyConditions": [
+												"Failed"
+											]
+										}
+									],
+									"userProperties": [],
+									"typeProperties": {
+										"message": "inner pipeline failed",
+										"errorCode": "500"
+									}
 								}
 							]
 						}
